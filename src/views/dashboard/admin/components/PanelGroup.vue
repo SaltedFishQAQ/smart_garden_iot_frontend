@@ -70,10 +70,10 @@ export default {
       this.$router.push(`/catalog/index`)
     },
     jumpToRulePage() {
-      console.log('TODO: jump to rule page')
+      this.$router.push(`/rule/index`)
     },
     jumpToTaskPage() {
-      console.log('TODO: jump to task page')
+      this.$router.push(`/task/index`)
     }
   }
 }

@@ -103,6 +103,18 @@ export const asyncRoutes = [
       }
     ]
   },
+  {
+    path: '/task',
+    component: Layout,
+    children: [
+      {
+        path: 'index',
+        component: () => import('@/views/task/index'),
+        name: 'Task',
+        meta: { title: 'Task', icon: 'tab' }
+      }
+    ]
+  },
   /** when your routing map is too long, you can split it into small modules **/
   // chartsRouter,
   tableRouter,
