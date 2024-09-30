@@ -1,5 +1,5 @@
 module.exports = {
-  title: 'Vue Element Admin',
+  title: 'smart garden dashboard',
 
   /**
    * @type {boolean} true | false
