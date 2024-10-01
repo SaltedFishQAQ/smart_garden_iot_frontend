@@ -9,7 +9,7 @@
           <div class="card-panel-text">
             Amount of data
           </div>
-          <count-to :start-val="0" :end-val="102400" :duration="2600" class="card-panel-num" />
+          <count-to :start-val="0" :end-val="data_count" :duration="2600" class="card-panel-num" />
         </div>
       </div>
     </el-col>
@@ -22,7 +22,7 @@
           <div class="card-panel-text">
             Number of devices
           </div>
-          <count-to :start-val="0" :end-val="81212" :duration="3000" class="card-panel-num" />
+          <count-to :start-val="0" :end-val="device_count" :duration="3000" class="card-panel-num" />
         </div>
       </div>
     </el-col>
@@ -35,7 +35,7 @@
           <div class="card-panel-text">
             Number of rules
           </div>
-          <count-to :start-val="0" :end-val="9280" :duration="3200" class="card-panel-num" />
+          <count-to :start-val="0" :end-val="rule_count" :duration="3200" class="card-panel-num" />
         </div>
       </div>
     </el-col>
@@ -48,7 +48,7 @@
           <div class="card-panel-text">
             Number of tasks
           </div>
-          <count-to :start-val="0" :end-val="13600" :duration="3600" class="card-panel-num" />
+          <count-to :start-val="0" :end-val="task_count" :duration="3600" class="card-panel-num" />
         </div>
       </div>
     </el-col>
@@ -57,12 +57,41 @@
 
 <script>
 import CountTo from 'vue-count-to'
+import { getDataCount } from '@/api/data'
+import { getDeviceCount } from '@/api/catalog'
+import { getRuleCount } from '@/api/rule'
+import { getScheduleCount } from '@/api/schedule'
 
 export default {
   components: {
     CountTo
   },
+  data() {
+    return {
+      data_count: 0,
+      device_count: 0,
+      rule_count: 0,
+      task_count: 0
+    }
+  },
+  created() {
+    this.fetchCount()
+  },
   methods: {
+    fetchCount() {
+      getDataCount().then(response => {
+        this.data_count = response.count
+      })
+      getDeviceCount().then(response => {
+        this.device_count = response.count
+      })
+      getRuleCount().then(response => {
+        this.rule_count = response.count
+      })
+      getScheduleCount().then(response => {
+        this.task_count = response.count
+      })
+    },
     jumpToDataPage() {
       this.$router.push(`/data/index`)
     },

@@ -8,7 +8,7 @@ import Layout from '@/layout'
 
 /* Router Modules */
 // import chartsRouter from './modules/charts'
-import tableRouter from './modules/table'
+// import tableRouter from './modules/table'
 
 /**
  * constantRoutes
@@ -117,7 +117,7 @@ export const asyncRoutes = [
   },
   /** when your routing map is too long, you can split it into small modules **/
   // chartsRouter,
-  tableRouter,
+  // tableRouter,
 
   // 404 page must be placed at the end !!!
   { path: '*', redirect: '/404', hidden: true }

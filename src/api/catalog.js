@@ -8,6 +8,14 @@ export function getDeviceList() {
   })
 }
 
+export function getDeviceCount() {
+  return request({
+    url: '/catalog/devices/count',
+    method: 'get',
+    params: {}
+  })
+}
+
 export function getServiceList() {
   return request({
     url: '/catalog/services',

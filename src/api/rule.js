@@ -8,6 +8,14 @@ export function getRuleList(params) {
   })
 }
 
+export function getRuleCount() {
+  return request({
+    url: '/rules/count',
+    method: 'get',
+    params: {}
+  })
+}
+
 export function updateRule(data) {
   return request({
     url: '/rules',

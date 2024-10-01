@@ -8,6 +8,14 @@ export function getScheduleList(params) {
   })
 }
 
+export function getScheduleCount() {
+  return request({
+    url: '/schedules/count',
+    method: 'get',
+    params: {}
+  })
+}
+
 export function updateSchedule(data) {
   return request({
     url: '/schedules',

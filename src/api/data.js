@@ -15,3 +15,11 @@ export function getDataList(params) {
     params: params
   })
 }
+
+export function getDataCount() {
+  return request({
+    url: '/data/count',
+    method: 'get',
+    params: {}
+  })
+}
