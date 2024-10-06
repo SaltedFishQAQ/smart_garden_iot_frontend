@@ -78,7 +78,7 @@ export default {
     },
     fetchMeasurementList() {
       getMeasurementList().then(response => {
-        this.measurementList = response.list
+        this.measurementList = response.list.filter(item => item !== 'default')
         this.fetchDataList()
       })
     },

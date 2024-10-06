@@ -1,7 +1,7 @@
 <template>
   <div class="tab-container">
     <el-tabs v-model="activeName" style="margin-top:15px;" type="border-card">
-      <el-tab-pane v-for="item in measurementList" :key="item" :label="item" :name="item">
+      <el-tab-pane v-for="item in measurementList" :key="item" :label="item | labelFilter" :name="item">
         <keep-alive>
           <tab-pane v-if="activeName==item" :measurement="item" />
         </keep-alive>
@@ -17,6 +17,15 @@ import { getMeasurementList } from '@/api/data'
 export default {
   name: 'Data',
   components: { TabPane },
+  filters: {
+    labelFilter(label) {
+      if (label !== 'default') {
+        return label
+      }
+
+      return 'operation'
+    }
+  },
   data() {
     return {
       measurementList: [],
