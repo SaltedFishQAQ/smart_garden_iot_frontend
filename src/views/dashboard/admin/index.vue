@@ -88,10 +88,16 @@ export default {
         const params = {
           'measurement': item,
           'page': 1,
-          'size': 10
+          'size': 12
         }
         return getDataList(params).then(response => {
-          this.$set(this.dataSet, item, response.list)
+          const list = response.list
+          const more = 12 - list.length
+          if (more !== 0) {
+            const fillArray = new Array(more).fill(0)
+            list.unshift(...fillArray)
+          }
+          this.$set(this.dataSet, item, list)
         })
       })
       Promise.all(promises).then(() => {
