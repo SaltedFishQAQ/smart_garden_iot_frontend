@@ -1,0 +1,16 @@
+{
+	"folders": [
+		{
+			"path": "../../smart-garden-iot/smart_garden_iot"
+		},
+		{
+			"name": "smart_garden_iot",
+			"path": "../../smart-garden-iot/smart_garden_iot/smart_garden_iot"
+		},
+		{
+			"name": "smart_garden_iot_frontend-1",
+			"path": "../../smart_garden_iot_frontend/smart_garden_iot_frontend-1"
+		}
+	],
+	"settings": {}
+}

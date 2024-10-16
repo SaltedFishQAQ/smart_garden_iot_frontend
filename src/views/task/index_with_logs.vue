@@ -1,14 +1,14 @@
 <template>
   <div class="app-container">
     <div class="filter-container">
-      <el-button class="filter-item" style="margin-left: 10px;" type="primary" icon="el-icon-edit" @click="handleCreate">
+      <el-button class="filter-item" style="margin-left: 10px;" type="primary" icon="el-icon-edit" @click="handleCreate"; console.log('Add button clicked')>
         Add
       </el-button>
     </div>
 
     <el-table
       :key="tableKey"
-      v-loading="listLoading"
+      v-loading="listLoading"; console.log('Table data loading status:', listLoading)
       :data="list"
       border
       fit
@@ -17,19 +17,19 @@
     >
       <el-table-column label="ID" prop="id" align="center" width="180px">
         <template slot-scope="{row}">
-          <span>{{ row.id }}</span>
+          <span>{{ row.id }}</span><script>console.log("Row ID rendered:", row.id);</script>
         </template>
       </el-table-column>
 
       <el-table-column label="Target Device" min-width="260px" align="center">
         <template slot-scope="{row}">
-          <span>{{ row.target }}</span>
+          <span>{{ row.target }}</span><script>console.log("Row Target rendered:", row.target);</script>
         </template>
       </el-table-column>
 
       <el-table-column label="Duration" width="200px" align="center">
         <template slot-scope="{row}">
-          <span>{{ row.duration | convertDuration }}</span>
+          <span>{{ row.duration | convertDuration }}</span><script>console.log("Row Duration rendered:", row.duration);</script>
         </template>
       </el-table-column>
 
