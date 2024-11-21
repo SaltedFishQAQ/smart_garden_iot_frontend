@@ -16,6 +16,14 @@ export function register(data) {
   })
 }
 
+export function getUserList(params) {
+  return request({
+    url: '/user',
+    method: 'get',
+    params: { params }
+  })
+}
+
 export function getInfo(token) {
   return request({
     url: '/vue-element-admin/user/info',

@@ -1,5 +1,5 @@
 import { login } from '@/api/user'
-import { getToken, setToken, removeToken } from '@/utils/auth'
+import { getToken, setToken, removeToken, setUser } from '@/utils/auth'
 import router, { resetRouter } from '@/router'
 
 const state = {
@@ -41,6 +41,7 @@ const actions = {
           const token = response.token
           commit('SET_TOKEN', token)
           setToken(token)
+          setUser(data)
           resolve()
         }
       })

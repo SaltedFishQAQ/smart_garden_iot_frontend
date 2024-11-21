@@ -115,6 +115,18 @@ export const asyncRoutes = [
       }
     ]
   },
+  {
+    path: '/area',
+    component: Layout,
+    children: [
+      {
+        path: 'index',
+        component: () => import('@/views/area/index'),
+        name: 'Area',
+        meta: { title: 'Area', icon: 'theme' }
+      }
+    ]
+  },
   /** when your routing map is too long, you can split it into small modules **/
   // chartsRouter,
   // tableRouter,

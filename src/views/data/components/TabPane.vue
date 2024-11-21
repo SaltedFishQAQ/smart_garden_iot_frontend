@@ -8,6 +8,12 @@
       </template>
     </el-table-column>
 
+    <el-table-column min-width="200px" label="Area">
+      <template slot-scope="{row}">
+        <span>{{ row.area }}</span>
+      </template>
+    </el-table-column>
+
     <el-table-column class-name="status-col" label="Value" width="200">
       <template slot-scope="{row}">
         <span v-if="isNumber(row.value)">{{ row.value }}</span>
