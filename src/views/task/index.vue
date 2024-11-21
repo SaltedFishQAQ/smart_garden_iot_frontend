@@ -1,14 +1,14 @@
 <template>
   <div class="app-container">
     <div class="filter-container">
-      <el-button class="filter-item" style="margin-left: 10px;" type="primary" icon="el-icon-edit" @click="handleCreate"; console.log('Add button clicked')>
+      <el-button class="filter-item" style="margin-left: 10px;" type="primary" icon="el-icon-edit" @click="handleCreate">
         Add
       </el-button>
     </div>
 
     <el-table
       :key="tableKey"
-      v-loading="listLoading"; console.log('Table data loading status:', listLoading)
+      v-loading="listLoading"
       :data="list"
       border
       fit
@@ -17,19 +17,19 @@
     >
       <el-table-column label="ID" prop="id" align="center" width="180px">
         <template slot-scope="{row}">
-          <span>{{ row.id }}</span><script>console.log("Row ID rendered:", row.id);</script>
+          <span>{{ row.id }}</span>
         </template>
       </el-table-column>
 
       <el-table-column label="Target Device" min-width="260px" align="center">
         <template slot-scope="{row}">
-          <span>{{ row.target }}</span><script>console.log("Row Target rendered:", row.target);</script>
+          <span>{{ row.target }}</span>
         </template>
       </el-table-column>
 
       <el-table-column label="Duration" width="200px" align="center">
         <template slot-scope="{row}">
-          <span>{{ row.duration | convertDuration }}</span><script>console.log("Row Duration rendered:", row.duration);</script>
+          <span>{{ row.duration | convertDuration }}</span>
         </template>
       </el-table-column>
 

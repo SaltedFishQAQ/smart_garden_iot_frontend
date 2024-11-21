@@ -38,8 +38,9 @@ const actions = {
         if (typeof data === 'string') {
           reject(data)
         } else {
-          commit('SET_TOKEN', 'admin-token')
-          setToken('admin-token')
+          const token = response.token
+          commit('SET_TOKEN', token)
+          setToken(token)
           resolve()
         }
       })
