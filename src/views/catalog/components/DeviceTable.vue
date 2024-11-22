@@ -14,6 +14,12 @@
         </template>
       </el-table-column>
 
+      <el-table-column label="Area" min-width="100">
+        <template slot-scope="{row}">
+          {{ row.area_name }}
+        </template>
+      </el-table-column>
+
       <el-table-column label="Certification" width="200" align="center">
         <template slot-scope="{row}">
           <el-tag :type="row.auth_status | statusFilter">
