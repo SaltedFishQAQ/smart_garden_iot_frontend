@@ -10,14 +10,14 @@
 ### University
 Politecnico di Torino / Polytechnic University of Turin
 
-<img src="document/polito.png" alt="Description" width="213" height="80">
+<img src="src/assets/readme/polito.png" alt="Description" width="213" height="80">
 
 ### Course
 Master of Science program in ICT for Smart Societies
 
 01QWRBH - Programming for IoT applications
 
-<img src="document/ict4ss.png" alt="Description" width="200" height="80">
+<img src="src/assets/readme/ict4ss.png" alt="Description" width="200" height="80">
 
 ---
 ## 📖 Introduction
@@ -69,7 +69,7 @@ Access the web dashboard:
 1. Default URL: http://localhost:9527/
 2. View live sensor data and control your garden devices.
 3. Configure automation rules and schedules.
-![dashboard.png](document/dashboard.png)
+![dashboard.png](src/assets/readme/dashboard.png)
 
 ---
 ## ✍️ Teams
