@@ -56,8 +56,7 @@ export default {
       listQuery: {
         page: 1,
         size: 10,
-        measurement: this.measurement,
-        start_at: '2024-09-01 00:00:00'
+        measurement: this.measurement
       },
       loading: false
     }
